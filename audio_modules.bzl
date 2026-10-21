@@ -581,3 +581,31 @@ audio_modules.register(
     deps = [":%b_swr_dlkm",
 	],
 )
+
+audio_modules.register(
+    name = "es8326_dlkm",
+    path = ASOC_CODECS_PATH + "/es8326",
+    config_option = "CONFIG_SND_SOC_ES8326",
+    srcs = [
+        "es8326.c",
+    ],
+)
+
+# >>>> AW883XX MODULE <<<<
+audio_modules.register(
+    name = "aw883xx_dlkm",
+    path = ASOC_CODECS_PATH + "/aw883xx",
+    config_option = "CONFIG_SND_SOC_AW883XX",
+    srcs = [
+        "aw883xx.c",
+        "aw883xx_bin_parse.c",
+        "aw883xx_calib.c",
+        "aw883xx_device.c",
+        "aw883xx_init.c",
+        "aw883xx_monitor.c",
+        "aw883xx_spin.c",
+    ],
+    deps = [":%b_wcd_core_dlkm",
+            ":%b_swr_dlkm",
+       ],
+)

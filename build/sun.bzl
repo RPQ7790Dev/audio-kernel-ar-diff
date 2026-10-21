@@ -36,6 +36,7 @@ def define_sun():
             "lpass_cdc_tx_macro_dlkm",
             "wsa883x_dlkm",
             "wsa884x_dlkm",
+            "aw883xx_dlkm",
             "wcd938x_dlkm",
             "wcd938x_slave_dlkm",
             "wcd939x_dlkm",
@@ -43,7 +44,8 @@ def define_sun():
             "wcd9378_dlkm",
             "wcd9378_slave_dlkm",
             "lpass_bt_swr_dlkm",
-			"qmp_dlkm"
+	    "qmp_dlkm",
+	    "es8326_dlkm"
         ],
         config_options = [
             "CONFIG_SND_SOC_SUN",
@@ -61,5 +63,6 @@ def define_sun():
             "CONFIG_AUDIO_BTFM_PROXY",
             "CONFIG_MSM_EXT_DISPLAY",
             "CONFIG_SND_SOC_QMP",
+	    "CONFIG_SND_SOC_ES8326",
         ]
     )
